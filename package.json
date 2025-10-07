@@ -1,0 +1,16 @@
+{
+  "name": "barberia-imperial-web",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "bun run dev.js",
+    "test": "pnpm dev"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.5",
+    "serve-static-file": "npm:@hono/node-server"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^24.7.0"
+  }
+}

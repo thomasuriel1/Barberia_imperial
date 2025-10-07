@@ -1,0 +1,155 @@
+/* Puedes usar los estilos del ejemplo anterior. */
+/* Asegúrate de reemplazar 'barberia-imperial-fondo.jpg' con tu imagen real. */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #1a1a1a;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+/* ... (Incluye el resto del código CSS aquí) ... */
+
+/* --- HERO SECTION (Similar a la imagen de Booksy) --- */
+.hero-section {
+    position: relative;
+    height: 70vh;
+    background-image: url('barberia-imperial-fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.hero-content {
+    position: relative;
+    z-index: 5;
+    max-width: 600px;
+}
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+.hero-content .highlight {
+    color: #e02b2b;
+}
+/* ... (El resto de estilos de la barra de búsqueda y categorías) ... */
+
+/* --- SEARCH BAR --- */
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 50px;
+    padding: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+.search-icon {
+    color: #000000;
+    margin: 0 10px;
+    font-size: 1.1em;
+}
+
+#search-input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 10px 0;
+}
+
+.search-btn {
+    background-color: #0f388f;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+    background-color: #e2e2e2;
+    color: #000000;
+}
+
+/* --- CATEGORIAS --- */
+.categories-section {
+    padding: 20px 50px;
+    text-align: center;
+}
+/* ... (Resto de estilos) ... */
+
+/* Tu código original ya debería tener esto, si no, actualízalo. */
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px; /* Crea el espacio entre los enlaces */
+    font-size: 0.95em;
+    transition: color 0.3s;
+    /* Los enlaces <a> son inline por defecto, por lo que con el margin es suficiente. */
+}
+
+/* Es importante asegurar que el contenedor .nav no tenga estilos que los apilen */
+    /* No debe tener display: block o flex-direction: column */
+
+.header {
+    display: flex; /* 1. Habilita Flexbox */
+    
+    /* ¡CAMBIO CLAVE! */
+    justify-content: flex-end; /* 2. Mueve todo el contenido (solo el <nav>) al final (la derecha) */
+    
+    align-items: center; /* Centra verticalmente */
+    
+    /* Tus estilos de fondo y padding */
+    padding: 15px 50px;
+    background-color: #0f388f; 
+    color: white;
+    /* ... (resto de estilos) ... */
+}
+/* Asumo que los enlaces tienen la clase .category-link o están dentro de un contenedor específico */
+
+.categories-section a {
+    /* 1. Quitar el subrayado azul */
+    text-decoration: none; 
+    
+    /* 2. Cambiar el color del texto a blanco (o un color que contraste) */
+    color: rgb(0, 0, 0); 
+    
+    /* 3. Darles un poco de espacio entre sí */
+    margin: 0 10px; 
+    
+    /* 4. Opcional: Si quieres que el enlace reaccione al pasar el mouse */
+    transition: color 0.3s;
+}
+
+/* Opcional: Cambiar de color al pasar el mouse (hover) para dar feedback al usuario */
+.categories-section a:hover {
+    color: #453492; /* Color dorado de acento, por ejemplo */
+}
