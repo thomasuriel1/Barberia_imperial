@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirmar Datos de Reserva</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">Barbería Imperial</div>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="#">Servicios</a>
+        <a href="#">Equipo</a>
+        <a href="#">Contacto</a>
+        <a href="#"><i class="fas fa-user-circle"></i> Mi Cuenta</a>
+      </nav>
+    </header>
+
+    <main class="confirmation-page-content">
+      <h1>Confirma tu Reserva</h1>
+
+      <div class="summary-cards-container">
+        <div class="summary-card">
+          <div
+            class="card-image-placeholder"
+            id="selected-service-image"
+            style="background-image: url('placeholder-corte.jpg')"
+          ></div>
+          <div class="card-title" id="selected-service-name">Corte</div>
+        </div>
+        <div class="summary-card">
+          <div
+            class="card-image-placeholder"
+            id="selected-barber-image"
+            style="background-image: url('placeholder-uriel.jpg')"
+          ></div>
+          <div class="card-title" id="selected-barber-name">Uriel</div>
+        </div>
+      </div>
+
+      <div class="summary-details-card">
+        <div class="detail-row">
+          <i class="fas fa-calendar-alt icon-blue"></i>
+          <span id="selected-date-display">Miércoles 29 de Octubre</span>
+        </div>
+        <div class="detail-row">
+          <i class="fas fa-clock icon-blue"></i>
+          <span id="selected-time-display">8:00</span>
+          <span class="duration-display" id="selected-duration-display"
+            >30 m</span
+          >
+        </div>
+        <p class="time-in-hours">
+          en <span id="hours-until-appointment">14</span> horas
+        </p>
+      </div>
+
+      <form class="client-details-form">
+        <h2>Datos del Cliente</h2>
+        <div class="form-group">
+          <label for="client-name">* Nombre:</label>
+          <input
+            type="text"
+            id="client-name"
+            name="clientName"
+            required
+            placeholder="Tu nombre completo"
+          />
+        </div>
+        <div class="form-group">
+          <label for="client-phone">Teléfono:</label>
+          <div class="phone-input-group">
+            <select id="country-code" name="countryCode">
+              <option value="+54" selected>+54 🇦🇷 Argentina</option>
+
+              <option value="+591">+591 🇧🇴 Bolivia</option>
+              <option value="+55">+55 🇧🇷 Brasil</option>
+              <option value="+56">+56 🇨🇱 Chile</option>
+              <option value="+57">+57 🇨🇴 Colombia</option>
+              <option value="+593">+593 🇪🇨 Ecuador</option>
+              <option value="+34">+34 🇪🇸 España</option>
+              <option value="+52">+52 🇲🇽 México</option>
+              <option value="+595">+595 🇵🇾 Paraguay</option>
+              <option value="+51">+51 🇵🇪 Perú</option>
+              <option value="+598">+598 🇺🇾 Uruguay</option>
+              <option value="+58">+58 🇻🇪 Venezuela</option>
+            </select>
+            <input
+              type="tel"
+              id="client-phone"
+              name="clientPhone"
+              placeholder="Número de teléfono (máximo 10 dígitos)"
+              pattern="[0-9]{1,10}"
+              maxlength="10"
+              inputmode="numeric"
+              required
+              oninput="validateNumberInput(this)"
+            />
+          </div>
+        </div>
+      </form>
+
+      <div class="action-buttons-confirm">
+        <button class="action-btn back-btn" onclick="history.back()">
+          <i class="fas fa-arrow-left"></i> Volver
+        </button>
+        <button class="action-btn confirm-final-btn" id="final-confirm-btn">
+          <i class="fas fa-check"></i> Confirmar
+        </button>
+      </div>
+    </main>
+
+    <script src="confirmation.js"></script>
+    <script src="reservation-data-handler.js"></script>
+  </body>
+</html>
