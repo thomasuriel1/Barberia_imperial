@@ -1,99 +1,134 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reserva tu Cita en Barbería Imperial</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
     <header class="header">
-        <div class="logo">Barbería Imperial</div>
-        <nav class="nav">
-            <a href="index.html">Inicio</a> <a href="#">Servicios</a>
-            <a href="#">Equipo</a>
-            <a href="#">Contacto</a>
-            <a href="#"><i class="fas fa-user-circle"></i> Mi Cuenta</a>
-        </nav>
+      <div class="logo">Barbería Imperial</div>
+      <nav class="nav">
+        <a href="index.html">Inicio</a> <a href="#">Servicios</a>
+        <a href="#">Equipo</a>
+        <a href="#">Contacto</a>
+        <a href="#"><i class="fas fa-user-circle"></i> Mi Cuenta</a>
+      </nav>
     </header>
 
     <main class="reservation-page-content">
-        <h1>¡Elige tu servicio y reserva tu cita!</h1>
+      <h1>¡Elige tu servicio y reserva tu cita!</h1>
 
-        <section class="selection-section services-selection">
-            <h2>Selecciona un servicio</h2>
-            <div class="selection-grid services-grid">
-                <div class="selection-card service-card active" data-service="corte">
-                    <div class="card-image-placeholder" style="background-image: url('placeholder-corte.jpg');"></div>
-                    <div class="card-title">Corte</div>
-                </div>
-                <div class="selection-card service-card" data-service="corte-barba">
-                    <div class="card-image-placeholder" style="background-image: url('placeholder-corte-barba.jpg');"></div>
-                    <div class="card-title">Corte y Barba</div>
-                </div>
-                <div class="selection-card service-card" data-service="color-completo">
-                    <div class="card-image-placeholder" style="background-image: url('placeholder-color.jpg');"></div>
-                    <div class="card-title">Color Completo</div>
-                </div>
-                <div class="selection-card service-card" data-service="mechas">
-                    <div class="card-image-placeholder" style="background-image: url('placeholder-mechas.jpg');"></div>
-                    <div class="card-title">Mechas</div>
-                </div>
-            </div>
-        </section>
+      <section class="selection-section services-selection">
+        <h2>Selecciona un servicio</h2>
+        <div class="selection-grid services-grid">
+          <div class="selection-card service-card active" data-service="corte">
+            <div
+              class="card-image-placeholder"
+              style="background-image: url('placeholder-corte.jpg')"
+            ></div>
+            <div class="card-title">Corte</div>
+          </div>
+          <div class="selection-card service-card" data-service="corte-barba">
+            <div
+              class="card-image-placeholder"
+              style="background-image: url('placeholder-corte-barba.jpg')"
+            ></div>
+            <div class="card-title">Corte y Barba</div>
+          </div>
+          <div
+            class="selection-card service-card"
+            data-service="color-completo"
+          >
+            <div
+              class="card-image-placeholder"
+              style="background-image: url('placeholder-color.jpg')"
+            ></div>
+            <div class="card-title">Color Completo</div>
+          </div>
+          <div class="selection-card service-card" data-service="mechas">
+            <div
+              class="card-image-placeholder"
+              style="background-image: url('placeholder-mechas.jpg')"
+            ></div>
+            <div class="card-title">Mechas</div>
+          </div>
+        </div>
+      </section>
 
-        <section class="selection-section barbers-selection">
-            <h2>Selecciona tu barbero</h2>
-            <div class="selection-grid barbers-grid">
-                <div class="selection-card barber-card active" data-barber="uriel">
-                    <div class="card-image-placeholder" style="background-image: url('placeholder-uriel.jpg');"></div>
-                    <div class="card-title">Uriel</div>
-                </div>
-                <div class="selection-card barber-card" data-barber="valentin">
-                    <div class="card-image-placeholder" style="background-image: url('placeholder-valentin.jpg');"></div>
-                    <div class="card-title">Valentin</div>
-                </div>
-            </div>
-        </section>
+      <section class="selection-section barbers-selection">
+        <h2>Selecciona tu barbero</h2>
+        <div class="selection-grid barbers-grid">
+          <div class="selection-card barber-card active" data-barber="uriel">
+            <div
+              class="card-image-placeholder"
+              style="background-image: url('placeholder-uriel.jpg')"
+            ></div>
+            <div class="card-title">Uriel</div>
+          </div>
+          <div class="selection-card barber-card" data-barber="valentin">
+            <div
+              class="card-image-placeholder"
+              style="background-image: url('placeholder-valentin.jpg')"
+            ></div>
+            <div class="card-title">Valentin</div>
+          </div>
+        </div>
+      </section>
 
-        <section class="schedule-selection">
-            <h2>Elige la fecha y hora</h2>
-            <div class="date-selector">
-                <button class="date-arrow"><i class="fas fa-chevron-left"></i></button>
-                <div class="date-option active" data-date="2023-10-28">Mar 28 Oct</div>
-                <div class="date-option" data-date="2023-10-29">Mié 29 Oct</div>
-                <div class="date-option" data-date="2023-10-30">Jue 30 Oct</div>
-                <button class="date-arrow"><i class="fas fa-chevron-right"></i></button>
-            </div>
-
-            <div class="time-slots-container">
-                <div class="date-header">
-                    <i class="fas fa-calendar-alt"></i> Martes 28 de Octubre
-                </div>
-                <div class="time-slots-grid">
-                    <div class="time-slot available" data-time="10:00">
-                        10:00
-                        <span class="status">DISPONIBLE</span>
-                        <span class="duration">30 min</span>
-                    </div>
-                    <div class="time-slot reserved" data-time="10:30">
-                        10:30
-                        <span class="status">RESERVADO</span>
-                    </div>
-                    </div>
-            </div>
-        </section>
-
-        <div class="reservation-actions">
-            <button class="action-btn back-btn" onclick="history.back()">Volver</button>
-            <button class="action-btn continue-btn" id="confirm-btn">Continuar</button>
+      <section class="schedule-selection">
+        <h2>Elige la fecha y hora</h2>
+        <div class="date-selector">
+          <button class="date-arrow">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="date-option active" data-date="2023-10-28">
+            Mar 28 Oct
+          </div>
+          <div class="date-option" data-date="2023-10-29">Mié 29 Oct</div>
+          <div class="date-option" data-date="2023-10-30">Jue 30 Oct</div>
+          <button class="date-arrow">
+            <i class="fas fa-chevron-right"></i>
+          </button>
         </div>
 
+        <div class="time-slots-container">
+          <div class="date-header">
+            <i class="fas fa-calendar-alt"></i> Martes 28 de Octubre
+          </div>
+          <div class="time-slots-grid">
+            <div class="time-slot available" data-time="10:00">
+              10:00
+              <span class="status">DISPONIBLE</span>
+              <span class="duration">30 min</span>
+            </div>
+            <div class="time-slot reserved" data-time="10:30">
+              10:30
+              <span class="status">RESERVADO</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="reservation-actions">
+        <button class="action-btn back-btn" onclick="history.back()">
+          Volver
+        </button>
+        <button class="action-btn continue-btn" id="confirm-btn">
+          Continuar
+        </button>
+      </div>
     </main>
 
     <script src="reservation.js"></script>
-</body>
+  </body>
 </html>
