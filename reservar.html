@@ -35,7 +35,7 @@
 
       <section class="selection-section barbers-selection">
         <h2>Selecciona tu barbero</h2>
-        <div class="selection-grid barbers-grid"></div>
+        <div class="selection-grid barbers-grid" id="barbers-grid"></div>
       </section>
 
       <section class="schedule-selection">
@@ -44,7 +44,8 @@
           <button class="date-arrow">
             <i class="fas fa-chevron-left"></i>
           </button>
-          <div class="date-option active" data-date="2023-10-28">
+
+          <div class="date-option selected" data-date="2023-10-28">
             Mar 28 Oct
           </div>
           <div class="date-option" data-date="2023-10-29">Mié 29 Oct</div>
@@ -58,15 +59,19 @@
           <div class="date-header">
             <i class="fas fa-calendar-alt"></i> Martes 28 de Octubre
           </div>
-          <div class="time-slots-grid"></div>
+          <div class="time-slots-grid" id="time-slots-grid"></div>
         </div>
       </section>
 
       <div class="reservation-actions">
         <button class="action-btn back-btn" onclick="history.back()">
-          Volver
+          <i class="fas fa-arrow-left"></i> Volver
         </button>
-        <button class="action-btn continue-btn" id="confirm-btn">
+        <button
+          class="action-btn continue-btn disabled"
+          id="confirm-btn"
+          disabled
+        >
           Continuar
         </button>
       </div>

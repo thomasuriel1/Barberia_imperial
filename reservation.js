@@ -97,6 +97,7 @@ async function loadBarbers() {
     );
     if (!response.ok) throw new Error("Error al cargar barberos.");
     const data = await response.json();
+    console.log(data);
 
     barbersGrid.innerHTML = "";
 
@@ -106,6 +107,7 @@ async function loadBarbers() {
 
       card.dataset.id = barber.id;
       card.dataset.name = barber.nombre;
+      console.log(barber.nombre);
 
       // Seleccionar el primer barbero por defecto
       if (!selectedBarberId) {
@@ -113,6 +115,7 @@ async function loadBarbers() {
         selectedBarberName = barber.nombre;
         card.classList.add("active");
       }
+      console.log(barber.nombre);
       // Estructura HTML de la tarjeta
       const barberNameUrl = barber.nombre.toLowerCase().replace(/ /g, "-");
       card.innerHTML = `
