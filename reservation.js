@@ -38,7 +38,6 @@ async function loadServices() {
     );
     if (!response.ok) throw new Error("Error al cargar servicios.");
     const data = await response.json();
-    console.log(data);
 
     // Limpiar el contenedor antes de añadir el contenido dinámico
     servicesGrid.innerHTML = "";
@@ -65,10 +64,6 @@ async function loadServices() {
                 </div>
                 <div class="card-title">${service.nombre}</div>
                 <div class="service-details">
-                    <span class="price">$${service.precio}</span>
-                    <span class="duration">${
-                      service.duracion_minutos || FIXED_DURATION_MINUTES
-                    } min</span>
                 </div>
             `;
 
@@ -118,7 +113,6 @@ async function loadBarbers() {
         selectedBarberName = barber.nombre;
         card.classList.add("active");
       }
-
       // Estructura HTML de la tarjeta
       const barberNameUrl = barber.nombre.toLowerCase().replace(/ /g, "-");
       card.innerHTML = `
